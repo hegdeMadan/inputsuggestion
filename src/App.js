@@ -23,7 +23,7 @@ const App = () => {
       return;
     };
     if (strictModeEnabled) {
-      cacheFilter = initialVal.filter(val => val[0] === e.target.value[0])
+      cacheFilter = initialVal.filter(val => val.toLowerCase() === e.target.value.toLowerCase())
       setFilter(cacheFilter);
     } else {
       cacheFilter = initialVal.filter(val => val.includes(inputVal))
